@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #071015;
+  --panel: rgba(255, 255, 255, 0.075);
+  --line: rgba(255, 255, 255, 0.14);
+  --muted: #9fb3c8;
+  --text: #edf7ff;
+  --cyan: #27e0d8;
+  --green: #8bf27b;
+  --rose: #ff6680;
+  --amber: #ffd166;
+}
+
+html, body, [class*="css"] {
+  font-family: 'Inter', sans-serif;
+}
+
+.stApp {
+  background:
+    radial-gradient(circle at 15% 8%, rgba(39, 224, 216, 0.20), transparent 31%),
+    radial-gradient(circle at 85% 18%, rgba(139, 242, 123, 0.13), transparent 28%),
+    linear-gradient(135deg, #071015 0%, #0b1720 52%, #071015 100%);
+  color: var(--text);
+}
+
+section[data-testid="stSidebar"] {
+  background: rgba(5, 13, 18, 0.76);
+  border-right: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+h1, h2, h3 {
+  letter-spacing: 0;
+}
+
+.hero {
+  padding: 28px 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.11), rgba(255,255,255,0.045));
+  box-shadow: 0 20px 70px rgba(0,0,0,0.24);
+  backdrop-filter: blur(22px);
+  animation: rise 500ms ease-out both;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.02;
+  margin: 0 0 10px 0;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 920px;
+}
+
+.glass-card {
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.18);
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(39, 224, 216, 0.38);
+}
+
+.metric-card {
+  min-height: 126px;
+}
+
+.metric-label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.metric-value {
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.metric-foot {
+  color: var(--cyan);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(39, 224, 216, 0.32);
+  color: #dffcff;
+  background: rgba(39, 224, 216, 0.10);
+  font-size: 0.84rem;
+}
+
+.stButton>button, .stDownloadButton>button {
+  border-radius: 8px;
+  border: 1px solid rgba(39,224,216,.35);
+  background: linear-gradient(135deg, #27e0d8, #8bf27b);
+  color: #041014;
+  font-weight: 700;
+}
+
+div[data-testid="stMetric"] {
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid var(--line);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

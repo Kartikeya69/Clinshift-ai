@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments and local secrets
+.venv/
+venv/
+env/
+.env
+.streamlit/secrets.toml
+
+# Large local EHR data and generated artifacts
+new data/
+data/raw/
+data/processed/
+models/
+
+# Model/report binaries
+*.joblib
+*.pkl
+*.pickle
+*.pdf
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
