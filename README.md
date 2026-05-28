@@ -14,6 +14,32 @@ streamlit run dashboard/app.py
 
 The pipeline is also triggered automatically from the dashboard if artifacts are missing.
 
+## Dataset
+
+The full EHR CSV dataset is hosted externally because several files are too large for normal GitHub storage:
+
+[Download the dataset from Google Drive](https://drive.google.com/drive/folders/1dPkA16Cux6zOCpDz32fLY8V66UNKMtB8)
+
+After downloading, place the CSV files in this local folder structure:
+
+```text
+new data/
+  DATA/
+    patients.csv
+    encounters.csv
+    observations.csv
+    conditions.csv
+    medications.csv
+    procedures.csv
+    ...
+```
+
+Then run:
+
+```powershell
+python -m src.pipeline
+```
+
 ## Project Layout
 
 ```text
